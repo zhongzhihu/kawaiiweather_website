@@ -67,9 +67,20 @@ body::before {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   font-family: "Fraunces", serif;
   font-size: 1.35rem;
   letter-spacing: 0.02em;
+}
+
+.brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  object-fit: cover;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
 }
 
 .nav {
@@ -77,6 +88,20 @@ body::before {
   align-items: center;
   gap: 18px;
   font-size: 0.98rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--sea);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .nav-cta,
@@ -106,6 +131,59 @@ body::before {
   color: var(--text);
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: rgba(255, 255, 255, 0.05);
+}
+
+.app-store-cta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.app-store-button {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 220px;
+  padding: 11px 18px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #f8fbff;
+  background: linear-gradient(145deg, #0f1824, #071019);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35);
+  cursor: default;
+}
+
+.app-store-button:hover {
+  transform: none;
+}
+
+.app-store-overline {
+  font-size: 0.63rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(136, 231, 225, 0.88);
+}
+
+.app-store-brand {
+  margin-top: 2px;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
+.store-eta {
+  margin-top: 1px;
+  font-size: 0.78rem;
+  color: rgba(136, 231, 225, 0.86);
+}
+
+.play-store-button {
+  border-color: rgba(136, 231, 225, 0.26);
+  background: linear-gradient(145deg, #0d1d22, #061317);
+}
+
+.play-store-button .store-eta {
+  font-weight: 700;
 }
 
 .button:hover,
@@ -155,8 +233,6 @@ h3 {
 
 .lede,
 .feature-card p,
-.experience-copy p,
-.mini-card p,
 .faq p,
 .download p,
 .proof-strip span {
@@ -178,32 +254,14 @@ h3 {
   margin: 28px 0;
 }
 
-.hero-notes {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.hero-notes li,
 .proof-strip div,
 .feature-card,
-.mini-card,
 .faq article,
 .download {
   border: 1px solid var(--line);
   background: var(--panel);
   backdrop-filter: blur(18px);
   box-shadow: var(--shadow);
-}
-
-.hero-notes li {
-  padding: 18px;
-  border-radius: 20px;
-  font-size: 0.96rem;
-  line-height: 1.5;
 }
 
 .hero-visual {
@@ -284,65 +342,6 @@ h3 {
     var(--panel-strong);
 }
 
-.experience {
-  display: grid;
-  grid-template-columns: 1fr 0.9fr;
-  gap: 24px;
-  margin-bottom: 88px;
-}
-
-.experience-copy,
-.experience-panel {
-  padding: 32px;
-  border: 1px solid var(--line);
-  border-radius: 30px;
-  background: var(--panel-strong);
-  box-shadow: var(--shadow);
-}
-
-.bullet-panel {
-  display: grid;
-  gap: 18px;
-  margin-top: 28px;
-}
-
-.bullet-panel strong,
-.mini-card strong {
-  display: block;
-  margin-bottom: 8px;
-}
-
-.mini-card {
-  padding: 24px;
-  border-radius: 24px;
-}
-
-.mini-card + .mini-card {
-  margin-top: 16px;
-}
-
-.mini-card.accent,
-.mini-card.accent strong {
-  color: #0a1621;
-}
-
-.mini-card.accent {
-  background: linear-gradient(135deg, #dff5ff, #ffd69c);
-}
-
-.mini-label {
-  display: inline-block;
-  margin-bottom: 14px;
-  font-size: 0.78rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--sea);
-}
-
-.mini-card.accent .mini-label {
-  color: #20435a;
-}
-
 .faq {
   margin-bottom: 88px;
 }
@@ -398,13 +397,11 @@ h3 {
 
 @media (max-width: 1060px) {
   .hero,
-  .experience,
   .faq-list,
   .proof-strip {
     grid-template-columns: 1fr;
   }
 
-  .hero-notes,
   .feature-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -431,7 +428,6 @@ h3 {
   .site-header,
   .nav,
   .hero-actions,
-  .hero-notes,
   .feature-grid {
     gap: 12px;
   }
@@ -445,7 +441,6 @@ h3 {
     padding-top: 24px;
   }
 
-  .hero-notes,
   .feature-grid {
     grid-template-columns: 1fr;
   }

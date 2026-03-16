@@ -1,5 +1,5 @@
 const reveals = document.querySelectorAll(
-  ".feature-card, .experience-copy, .experience-panel, .faq article, .download, .proof-strip div"
+  ".feature-card, .faq article, .download, .proof-strip div"
 );
 
 const observer = new IntersectionObserver(
