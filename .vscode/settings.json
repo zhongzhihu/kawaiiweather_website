@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd /Users/zhongzhi/kawaiiweather_website && B64=\\$\\(base64 -i \"kawaii weather icon\\.png\" \\| tr -d '\\\\n'\\) && cat > favicon-rounded\\.svg <<EOF\n<svg xmlns=\"http://www\\.w3\\.org/2000/svg\" viewBox=\"0 0 64 64\">\n  <defs>\n    <clipPath id=\"rounded-square\">\n      <rect x=\"0\" y=\"0\" width=\"64\" height=\"64\" rx=\"14\" ry=\"14\" />\n    </clipPath>\n  </defs>\n  <image\n    href=\"data:image/png;base64,\\$B64\"\n    width=\"64\"\n    height=\"64\"\n    preserveAspectRatio=\"xMidYMid slice\"\n    clip-path=\"url\\(#rounded-square\\)\"\n  />\n</svg>\nEOF$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
