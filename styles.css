@@ -164,6 +164,17 @@ body::before {
   transform: none;
 }
 
+.app-store-button.is-live-store-link {
+  cursor: pointer;
+}
+
+.app-store-button.is-live-store-link:hover,
+.app-store-button.is-live-store-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(255, 208, 137, 0.7);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.38);
+}
+
 .app-store-overline {
   font-size: 0.63rem;
   letter-spacing: 0.08em;
