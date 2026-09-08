@@ -169,53 +169,6 @@ body::before {
   height: auto;
 }
 
-.app-store-button {
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 200px;
-  min-height: 67px;
-  padding: 11px 18px;
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  color: #f8fbff;
-  background: linear-gradient(145deg, #0f1824, #071019);
-  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35);
-  cursor: default;
-}
-
-.app-store-button:hover {
-  transform: none;
-}
-
-.app-store-overline {
-  font-size: 0.63rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(136, 231, 225, 0.88);
-}
-
-.app-store-brand {
-  margin-top: 2px;
-  font-size: 1.05rem;
-  letter-spacing: 0.01em;
-}
-
-.store-eta {
-  margin-top: 1px;
-  font-size: 0.78rem;
-  color: rgba(136, 231, 225, 0.86);
-}
-
-.play-store-button {
-  border-color: rgba(136, 231, 225, 0.26);
-  background: linear-gradient(145deg, #0d1d22, #061317);
-}
-
-.play-store-button .store-eta {
-  font-weight: 700;
-}
-
 .button:hover,
 .nav-cta:hover {
   transform: translateY(-2px);
@@ -594,11 +547,6 @@ h3 {
 
   .app-store-badge {
     width: 184px;
-  }
-
-  .app-store-button {
-    width: 184px;
-    min-height: 62px;
   }
 
   .feature-grid {
